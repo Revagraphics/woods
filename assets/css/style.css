@@ -190,7 +190,7 @@ p{
 
 .navbar-logo img {
   height: auto;
-  width: 200px;
+  width: 240px;
   object-fit: contain;
 }
 
@@ -309,7 +309,7 @@ p{
   }
 
   .navbar-logo img {
-    height: 50px;
+    height: 55px;
   }
 
   .navbar-nav {
@@ -331,7 +331,7 @@ p{
   }
 
   .navbar-logo img {
-    height: 45px;
+    height: 50px;
   }
 
   .navbar-logo-icon {
@@ -446,7 +446,7 @@ p{
 }
 
 .banner-desci{
-   font-size: 23px;
+   font-size: clamp(16px, 2.5vw, 23px);
   line-height: 1.7;
   margin-bottom: 35px;
   color: rgba(255, 255, 255, 0.85);
@@ -496,6 +496,14 @@ p{
     padding: 11px 22px;
     font-size: 13px;
   }
+
+  .banner-heading {
+    font-size: clamp(22px, 4.5vw, 32px);
+  }
+
+  .banner-desci {
+    font-size: clamp(14px, 2.2vw, 18px);
+  }
 }
 
 @media (max-width: 767px) {
@@ -516,6 +524,12 @@ p{
 
   .banner-desc {
     font-size: clamp(12px, 1.8vw, 14px);
+    margin-bottom: clamp(15px, 3vw, 25px);
+  }
+
+  .banner-desci {
+    font-size: clamp(14px, 2.2vw, 18px);
+    line-height: 1.6;
     margin-bottom: clamp(15px, 3vw, 25px);
   }
 
@@ -553,6 +567,12 @@ p{
   .banner-desc {
     font-size: clamp(11px, 1.6vw, 12px);
     margin-bottom: clamp(12px, 2.5vw, 20px);
+  }
+
+  .banner-desci {
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 1.6;
+    margin-bottom: clamp(15px, 2.5vw, 25px);
   }
 
   .banner-actions {
@@ -871,6 +891,50 @@ p{
   background: rgba(192, 125, 58, 0.15);
 }
 
+
+/* banner logo start */
+
+/* Banner Logo */
+.banner-logo{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 10;
+}
+
+.banner-logo img{
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px){
+
+    .banner-logo{
+        top: 20px;
+        right: 20px;
+    }
+
+    .banner-logo img{
+        width: 110px;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .banner-logo{
+        top: 15px;
+        right: 15px;
+    }
+
+    .banner-logo img{
+        width: 85px;
+    }
+
+}
+/* banner logo end */
 
 
 
@@ -1510,6 +1574,38 @@ p{
   }
 }
 
+/* Extra Small Mobile - Trainer */
+@media (max-width: 480px) {
+
+  .wood-showcase-section {
+    flex-direction: column;
+    padding: 12px 10px;
+    gap: 15px;
+  }
+
+  .trainer {
+    height: clamp(280px, 50vh, 350px);
+    border-radius: 12px;
+  }
+
+  .trainer-cnt {
+    bottom: clamp(15px, 2vh, 25px);
+    width: 90%;
+  }
+
+  .trainer-cnt h1 {
+    font-size: clamp(16px, 3vw, 20px);
+    margin-bottom: 6px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .trainer-cnt p {
+    font-size: clamp(11px, 1.5vw, 12px);
+    line-height: 1.4;
+  }
+}
+
 
 /* section 5  */
 
@@ -1622,6 +1718,75 @@ p{
   }
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+
+  .brand-hero-section {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .brand-content {
+    bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .brand-logos {
+    gap: 15px;
+    margin-bottom: 18px;
+  }
+
+  .brand-logos img {
+    max-height: 35px;
+  }
+
+  .brand-subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .brand-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .brand-hero-section {
+    height: clamp(350px, 60vh, 450px);
+    min-height: 350px;
+  }
+
+  .brand-content {
+    bottom: clamp(20px, 3vh, 25px);
+    padding: 0 12px;
+  }
+
+  .brand-logos {
+    gap: clamp(12px, 2vw, 18px);
+    margin-bottom: clamp(12px, 2vw, 15px);
+  }
+
+  .brand-logos img {
+    max-height: clamp(25px, 4vw, 35px);
+  }
+
+  .brand-subtitle {
+    font-size: clamp(11px, 1.8vw, 13px);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+
+  .brand-title {
+    font-size: clamp(14px, 2.8vw, 18px);
+    line-height: 1.15;
+  }
+}
+
 
 /* section-6... */
 
@@ -1713,6 +1878,13 @@ p{
     margin-bottom: 2rem;
   }
 
+}
+
+@media (max-width:768px){
+  .wood-logo {
+    top: 2%;
+    margin-bottom: 1rem;
+  }
 }
 
 .wood-logo img {
@@ -1890,6 +2062,25 @@ p{
     left: clamp(12px, 2vw, 16px);
     text-align: center;
     padding-top: clamp(30px, 4vw, 40px);
+    padding-left: clamp(12px, 2vw, 20px);
+    padding-right: clamp(12px, 2vw, 20px);
+  }
+
+  .wood-flooring-content-2 {
+    position: absolute;
+    top: 50%;
+    left: clamp(12px, 2vw, 16px);
+    right: clamp(12px, 2vw, 16px);
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align: center;
+    max-width: none;
+    padding: clamp(20px, 3vw, 30px);
+  }
+
+  .wood-flooring-content-2 h1 {
+    font-size: clamp(20px, 3.5vw, 32px);
+    margin-bottom: 12px;
   }
 
   .wood-logo {
@@ -1897,10 +2088,23 @@ p{
     top: clamp(10px, 1.5vw, 15px);
     right: clamp(10px, 2vw, 16px);
     margin-bottom: 0;
+    justify-content: flex-end;
+  }
+
+  .deck-logo {
+    position: absolute;
+    top: clamp(10px, 1.5vw, 15px);
+    left: clamp(10px, 2vw, 16px);
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
 
   .wood-logo img {
     max-width: clamp(80px, 8vw, 110px);
+  }
+
+  .deck-logo img {
+    max-width: clamp(70px, 8vw, 100px);
   }
 
   .wood-flooring-content h1 {
@@ -1914,11 +2118,131 @@ p{
 
   .wood-flooring-content p {
     font-size: clamp(11px, 1.8vw, 13px);
+    line-height: 1.6;
+  }
+
+  .wood-flooring-content-2 p {
+    font-size: clamp(12px, 1.8vw, 16px);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .catalog-btn {
-    padding: clamp(10px, 1.5vw, 11px) clamp(16px, 2.5vw, 20px);
+    padding: clamp(10px, 1.5vw, 13px) clamp(16px, 2.5vw, 22px);
     font-size: clamp(10px, 1.3vw, 12px);
+    display: inline-block;
+    margin-top: clamp(12px, 2vw, 20px);
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+  .wood-flooring-banner {
+    height: clamp(280px, 65vh, 500px);
+    min-height: 280px;
+  }
+
+  .wood-flooring-content {
+    right: clamp(10px, 2vw, 12px);
+    left: clamp(10px, 2vw, 12px);
+    text-align: center;
+    padding: clamp(20px, 3vw, 25px) clamp(10px, 2vw, 15px);
+    top: 45%;
+    max-width: none;
+  }
+
+  .wood-flooring-content-2 {
+    position: absolute;
+    top: 75%;
+    left: clamp(10px, 2vw, 12px);
+    right: clamp(10px, 2vw, 12px);
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align: center;
+    max-width: none;
+    padding: clamp(15px, 2.5vw, 20px);
+  }
+
+  .wood-flooring-content-2 h1 {
+    font-size: clamp(18px, 3vw, 26px);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .wood-logo {
+    position: absolute;
+    top: clamp(8px, 1vw, 12px);
+    right: clamp(8px, 1.5vw, 12px);
+    margin-bottom: 0;
+  }
+
+  .deck-logo {
+    position: absolute;
+    top: clamp(8px, 1vw, 12px);
+    left: clamp(8px, 1.5vw, 12px);
+    margin-bottom: 0;
+  }
+
+  .wood-logo img {
+    max-width: clamp(60px, 5vw, 80px);
+  }
+
+  @media (max-width: 768px) {
+    .wood-logo{
+      top:-90px;
+    }
+    .wood-logo img{
+      width:90px;
+    }
+  }
+
+  .deck-logo img {
+    max-width: clamp(55px, 5vw, 75px);
+  }
+
+  @media (max-width: 768px) {
+    .deck-logo{
+      top:-180px;
+    }
+    .deck-logo img{
+      width:120px;
+    }
+  }
+  .wood-flooring-content h1 {
+    font-size: clamp(16px, 2.5vw, 22px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .wood-flooring-content h1 span {
+    font-size: clamp(11px, 1.8vw, 16px);
+    margin-top: 5px;
+  }
+
+  .wood-flooring-content p {
+    font-size: clamp(10px, 1.5vw, 12px);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .wood-flooring-content-2 p {
+    font-size: clamp(10px, 1.5vw, 13px);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+  }
+
+  .catalog-btn {
+    padding: clamp(9px, 1.2vw, 11px) clamp(14px, 2vw, 18px);
+    font-size: clamp(9px, 1.1vw, 11px);
+    display: inline-block;
+    margin-top: clamp(10px, 1.5vw, 15px);
+    touch-action: manipulation;
+  }
+
+  .catalog-btn:active {
+    transform: scale(0.98);
   }
 }
 
@@ -1980,7 +2304,7 @@ p{
 
 /* Heading */
 .benefit-content h3 {
-  font-size: clamp(18px, 4vw, 35px);
+  font-size: clamp(18px, 4vw, 25px);
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -2792,5 +3116,42 @@ textarea {
 
     .stat-item p {
       font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wood-stats-section {
+      height: auto;
+      min-height: auto;
+      padding: 60px 0;
+    }
+
+    .stats-box {
+      padding: clamp(20px, 3vw, 30px);
+      border-radius: clamp(16px, 4vw, 20px);
+      background: rgba(60, 40, 20, 0.5);
+    }
+
+    .stat-item {
+      margin-bottom: clamp(15px, 2vw, 20px);
+      padding-bottom: clamp(15px, 2vw, 20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .stat-item h2 {
+      font-size: clamp(20px, 3.5vw, 26px);
+      margin-bottom: clamp(10px, 1.5vw, 14px);
+      letter-spacing: 0.5px;
+    }
+
+    .stat-item p {
+      font-size: clamp(13px, 2vw, 15px);
+      line-height: 1.5;
     }
   }
