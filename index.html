@@ -1723,31 +1723,65 @@
         <!-- Form Section -->
         <div class="footer-form">
           <h3>Get in Touch</h3>
+
           <form id="footer-contact-form">
 
             <div class="form-row">
-              <input type="text" placeholder="Name *" required>
-              <input type="tel" placeholder="Phone Number *" required>
+
+              <input type="text" name="user_name" placeholder="Name *" required>
+
+              <input type="tel" name="user_phone" placeholder="Phone Number *" required>
+
             </div>
 
             <div class="form-row">
-              <input type="email" placeholder="Email ID *" required>
+
+              <input type="email" name="user_email" placeholder="Email ID *" required>
+
             </div>
 
             <div class="form-row">
-              <select required>
-                <option value="" disabled selected>Select Product Category</option>
-                <option value="flooring">Flooring</option>
-                <option value="decking">Decking</option>
-                <option value="cladding">Cladding</option>
+
+              <select name="product_category" required>
+
+                <option value="" disabled selected>
+                  Select Product Category
+                </option>
+
+                <option value="Real Wood Flooring">
+                  Real Wood Flooring
+                </option>
+
+                <option value="Laminate Flooring">
+                  Laminate Flooring
+                </option>
+
+                <option value="WPC Decking">
+                  WPC Decking
+                </option>
+
+                <option value="WPC Cladding">
+                  WPC Cladding
+                </option>
+
+                <option value="Thermory Decking">
+                  Thermory Decking
+                </option>
+
+                <option value="Thermory Cladding">
+                  Thermory Cladding
+                </option>
+
               </select>
+
             </div>
 
-            <textarea placeholder="Message" rows="4"></textarea>
+            <textarea name="message" placeholder="Message" rows="4"></textarea>
 
             <button type="submit" class="form-submit-btn">
               Send Message
             </button>
+
           </form>
         </div>
 
@@ -1837,10 +1871,55 @@
 
 
 
+
+  <!-- go to form -->
+  <!-- Fixed Go to Form Button -->
+  <!-- Fixed Go to Form Button -->
+  <a href="#contact" class="fixed-form-btn" title="Go to Application Form">
+    <i class="fa-solid fa-paper-plane"></i>
+    <span>Apply Now</span>
+  </a>
+
+
+
   <!-- ================================================
        SCRIPTS
   ================================================= -->
   <!-- Custom Carousel (No jQuery or Owl needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+
+    emailjs.init("sitQ8-eMBXwvSdKTB");
+
+    document
+      .getElementById("footer-contact-form")
+      .addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        emailjs.sendForm(
+          "service_lb6myrk",
+          "template_fydwjcq",
+          this
+        )
+          .then(function () {
+
+            alert("Message Sent Successfully!");
+
+          })
+          .catch(function (error) {
+
+            alert("Failed to Send");
+
+            console.log(error);
+
+          });
+
+      });
+
+  </script>
+
+
   <script src="assets/js/main.js"></script>
 
 </body>
