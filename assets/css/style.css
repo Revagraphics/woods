@@ -3204,7 +3204,8 @@ textarea {
     }
     
     .fixed-form-btn span {
-        display: none;        /* Hide text on small screens */
+        display: block;  
+        font-size: 14px;
     }
     
     .fixed-form-btn i {
